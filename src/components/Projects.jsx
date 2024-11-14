@@ -2,7 +2,17 @@ import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 
 const Projects = () => {
-  const { t } = useTranslation(); 
+  const { t } = useTranslation();
+
+  // Depura el contenido de `t("projects.items", { returnObjects: true })`
+  const projects = t("projects.items", { returnObjects: true });
+
+  // Verifica si proyectos están siendo cargados correctamente
+  console.log("Proyectos cargados: ", projects);
+
+  if (!projects) {
+    return <div>Loading...</div>; // Mostrar algo mientras se cargan los proyectos
+  }
 
   return (
     <div className="border-b border-violet-950 pb-4">
@@ -13,12 +23,13 @@ const Projects = () => {
         transition={{ duration: 0.7 }}
         className="my-20 text-center text-4xl"
       >
-        {t("projects.title")} 
+        {t("projects.title")}
       </motion.h2>
 
       <div>
-       
-        {t("projects.items", { returnObjects: true }).map((project, index) => {
+        {projects.map((project, index) => {
+          console.log(`Project ${index + 1} image path:`, project.img);
+
           return (
             <div key={index} className="mb-8 flex flex-wrap lg:justify-center">
               <motion.div
@@ -27,9 +38,8 @@ const Projects = () => {
                 transition={{ duration: 0.7 }}
                 className="w-full lg:w-1/4"
               >
-                
                 <img
-                  src={project.img} 
+                  src={project.img}  // Asegúrate de que project.img tiene la ruta correcta
                   width={200}
                   height={150}
                   alt={project.title}
@@ -50,7 +60,7 @@ const Projects = () => {
                     key={techIndex}
                     className="mr-2 rounded px-2 py-1 text-sm font-medium text-pink-300 bg-neutral-900"
                   >
-                    {tech}{" "}
+                    {tech}
                   </span>
                 ))}
               </motion.div>
