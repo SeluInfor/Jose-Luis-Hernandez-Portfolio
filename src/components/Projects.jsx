@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 
 const Projects = () => {
-  const { t } = useTranslation(); // Accede a las traducciones con el hook t
+  const { t } = useTranslation(); 
 
   return (
     <div className="border-b border-violet-950 pb-4">
@@ -13,11 +13,11 @@ const Projects = () => {
         transition={{ duration: 0.7 }}
         className="my-20 text-center text-4xl"
       >
-        {t("projects.title")} {/* Usamos la clave traducida para el título */}
+        {t("projects.title")} 
       </motion.h2>
 
       <div>
-        {/* Mapeamos los proyectos */}
+       
         {t("projects.items", { returnObjects: true }).map((project, index) => {
           return (
             <div key={index} className="mb-8 flex flex-wrap lg:justify-center">
@@ -27,9 +27,9 @@ const Projects = () => {
                 transition={{ duration: 0.7 }}
                 className="w-full lg:w-1/4"
               >
-                {/* Mostramos la imagen del proyecto */}
+                
                 <img
-                  src={project.img}  // Aquí usamos la propiedad img del proyecto
+                  src={project.img} 
                   width={200}
                   height={150}
                   alt={project.title}
@@ -45,7 +45,6 @@ const Projects = () => {
                 <h6 className="mb-2 font-semibold">{project.title}</h6>
                 <p className="mb-4 text-neutral-400">{project.description}</p>
 
-                {/* Mapeamos las tecnologías */}
                 {project.technologies.map((tech, techIndex) => (
                   <span
                     key={techIndex}

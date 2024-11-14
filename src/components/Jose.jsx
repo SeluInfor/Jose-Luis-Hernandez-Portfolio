@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import josePic from "../assets/josePic.jpg";
 
-
 const Jose = () => {
   const { t, i18n } = useTranslation();
 
@@ -18,7 +17,7 @@ const Jose = () => {
               transition={{ duration: 0.5, delay: 0 }}
               className="pb-16 text-5xl text-center sm:text-6xl lg:text-8xl font-thin tracking-tight lg:mt-16 lg:text-left sm:text-left"
             >
-              {t("jose.name")} {/* Utilizando la traducción de 'name' */}
+              {t("jose.name")}
             </motion.h1>
 
             <motion.span
@@ -27,7 +26,7 @@ const Jose = () => {
               transition={{ duration: 0.5, delay: 0.5 }}
               className="bg-gradient-to-r from-teal-400 via-indigo-500 to-pink-500 bg-clip-text text-4xl tracking-tight text-transparent"
             >
-              {t('jose.role')} {/* Utilizando la traducción de 'role' */}
+              {t("jose.role")}
             </motion.span>
 
             <motion.p
@@ -36,7 +35,7 @@ const Jose = () => {
               transition={{ duration: 0.5, delay: 1 }}
               className="my-3 max-w-xl py-6 font-light tracking-tighter"
             >
-              {t('jose.description')} {/* Utilizando la traducción de 'description' */}
+              {t("jose.description")}
             </motion.p>
           </div>
         </div>

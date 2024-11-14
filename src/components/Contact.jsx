@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { FaPhoneAlt, FaEnvelope, FaMapPin, FaArrowUp } from "react-icons/fa";
@@ -9,24 +8,23 @@ const Contact = () => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth", 
+      behavior: "smooth",
     });
   };
 
   return (
     <div className="relative border-b border-l-violet-950">
-      {/* Motion para el título de Contacto */}
+      {/*título de Contacto */}
       <motion.h2
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
         transition={{ duration: 0.3 }}
         className="my-20 text-center text-4xl"
       >
-      <p>{t("contact.contactMe")}</p>
-
+        <p>{t("contact.contactMe")}</p>
       </motion.h2>
 
-      {/* Motion para los detalles de contacto */}
+      {/* detalles de contacto */}
       <motion.div
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: 100 }}
@@ -50,10 +48,8 @@ const Contact = () => {
           <FaPhoneAlt className="mr-2" size={20} />
           <a href>{t("contact.phoneNo")}</a>
         </div>
-
-        {/* Botón de scroll hacia arriba */}
         <button
-          onClick={scrollToTop} 
+          onClick={scrollToTop}
           className="block my-8 mx-auto p-3 rounded-full bg-blue-500 text-white shadow-lg hover:bg-blue-600 transition duration-200 w-max"
         >
           <FaArrowUp size={24} />

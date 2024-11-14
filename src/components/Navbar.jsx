@@ -1,10 +1,10 @@
 import logo from "../assets/logo.png";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
-import { useTranslation } from 'react-i18next'; // Importa el hook de traducción
+import { useTranslation } from 'react-i18next'; 
 
 const NavBar = () => {
-  const { i18n } = useTranslation(); // Usamos el hook para cambiar el idioma
+  const { i18n } = useTranslation(); 
 
   // Función para cambiar el idioma
   const changeLanguage = (lang) => {
@@ -27,13 +27,13 @@ const NavBar = () => {
       <div className="flex gap-4 items-center">
         <button
           className="text-lg font-semibold p-2 hover:text-blue-500"
-          onClick={() => changeLanguage('es')} // Cambiar a inglés
+          onClick={() => changeLanguage('es')} 
         >
           ES
         </button>
         <button
           className="text-lg font-semibold p-2 hover:text-blue-500"
-          onClick={() => changeLanguage('en')} // Cambiar a español
+          onClick={() => changeLanguage('en')} 
         >
           EN
         </button>

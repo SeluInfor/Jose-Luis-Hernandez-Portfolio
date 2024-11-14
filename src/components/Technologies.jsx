@@ -35,10 +35,10 @@ const Technologies = () => {
         
         {/* React Icon */}
         <motion.div
-          whileInView={{ opacity: 1, scale:1}} // Animación de entrada
-          whileOutOfView={{ opacity: 0, scale: 0.8 }} // Animación de salida
-          initial={{ opacity: 0, scale: 0.8 }} // Inicialmente pequeño y opaco
-          animate="animate" // Animación constante de sombra y borde
+          whileInView={{ opacity: 1, scale:1}} 
+          whileOutOfView={{ opacity: 0, scale: 0.8 }} 
+          initial={{ opacity: 0, scale: 0.8 }} 
+          animate="animate" 
           variants={iconVariants} 
           transition={{ duration:0.3}}
           className="rounded-2xl p-6"
