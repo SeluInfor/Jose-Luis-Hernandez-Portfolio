@@ -28,7 +28,13 @@ const Projects = () => {
                 className="w-full lg:w-1/4"
               >
                 
-            
+                <img
+                  src={project.img} 
+                  width={200}
+                  height={150}
+                  alt={project.title}
+                  className="mb-6 rounded"
+                />
               </motion.div>
               <motion.div
                 whileInView={{ opacity: 1, x: 0 }}
