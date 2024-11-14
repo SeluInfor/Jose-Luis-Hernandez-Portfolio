@@ -4,6 +4,7 @@ import Jose from "./components/Jose";
 import NavBar from "./components/Navbar"
 import Projects from "./components/Projects";
 import Technologies from "./components/Technologies";
+
 const App = () => {
   return (
    <div className=" overflow-x-clip text-neutral-300 antialiased selection:bg-cyan-100 selection:text-black">

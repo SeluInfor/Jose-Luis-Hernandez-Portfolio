@@ -1,0 +1,49 @@
+{
+  "jose": {
+    "name": "Jose Luis Hernández",
+    "role": "Desarrollador Full Stack",
+    "description": "Hola, soy Jose, un Desarrollador Full-Stack con pasión por construir aplicaciones web dinámicas y fáciles de usar. Me especializo tanto en el desarrollo frontend como en el backend. Disfruto resolver problemas complejos y entregar código limpio."
+  },
+  "experience": {
+    "title": "Experiencia", 
+    "items": [
+      { 
+        "year": "2024 - 3 meses",
+        "role": "Desarrollador Web Junior",
+        "company": "Vicomtech",
+        "description": "Desarrollé y mantuve aplicaciones web utilizando JavaScript, React.js y NestJS. Diseñé e implementé APIs RESTful para una comunicación de datos fluida. Colaboré con equipos multifuncionales para entregar software de alta calidad a tiempo.",
+        "technologies": ["Docker", "React.js", "Nest.js", "Jest", "MySQL"]
+      },
+      {
+        "year": "2021 - 2022",
+        "role": "Técnico de IT",
+        "company": "Disconsu",
+        "description": "Realicé reparaciones y mantenimiento de computadoras, ofrecí asesoramiento de ventas para equipos informáticos y soporte remoto por teléfono. Aseguré una resolución eficiente de problemas técnicos, brindando un servicio al cliente de alta calidad.",
+        "technologies": ["Anydesk", "Windows", "CrystalDiskInfo", "FurMark"]
+      }
+    ]
+  },
+  "projects": {
+    "title": "Proyectos",
+    "items": [
+      { 
+        "img": "../src/assets/projects/project1.jpg",
+        "title": "Honey Shop - Plataforma de comercio electrónico (EN PROCESO)",
+        "description": "Una plataforma de comercio electrónico construida para una tienda online de miel, ofreciendo una experiencia de compra fluida para los clientes al navegar y comprar productos de miel orgánica premium. La aplicación cuenta con un diseño responsivo, páginas de productos optimizadas y un proceso de pago seguro. Optimizada para SEO.",
+        "technologies": ["React", "Next.js", "Tailwindcss"]
+      },
+      {
+        "img": "../src/assets/projects/project2.jpg",
+        "title": "Landing page responsiva",
+        "description": "Una aplicación para gestionar tareas y proyectos, con funciones como la creación de tareas, asignación y seguimiento del progreso.",
+        "technologies": ["React", "Tailwind CSS"]
+      }
+    ]
+  },
+  "contact": {
+    "contactMe": "Pongámonos en contacto",
+    "address": "Irún / Badajoz",
+    "phoneNo": "+34 640822571",
+    "email": "Heernandezjoseluis98@gmail.com"
+  }
+}

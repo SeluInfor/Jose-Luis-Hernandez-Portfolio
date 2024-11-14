@@ -1,7 +1,11 @@
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import josePic from "../assets/josePic.jpg";
 
+
 const Jose = () => {
+  const { t, i18n } = useTranslation();
+
   return (
     <div className="border-b border-violet-950 pb-4 lg:mb-35">
       <div className="flex flex-wrap lg:flex-nowrap justify-center lg:justify-between items-center">
@@ -14,7 +18,7 @@ const Jose = () => {
               transition={{ duration: 0.5, delay: 0 }}
               className="pb-16 text-5xl text-center sm:text-6xl lg:text-8xl font-thin tracking-tight lg:mt-16 lg:text-left sm:text-left"
             >
-              Jose Luis Hernández
+              {t("jose.name")} {/* Utilizando la traducción de 'name' */}
             </motion.h1>
 
             <motion.span
@@ -23,7 +27,7 @@ const Jose = () => {
               transition={{ duration: 0.5, delay: 0.5 }}
               className="bg-gradient-to-r from-teal-400 via-indigo-500 to-pink-500 bg-clip-text text-4xl tracking-tight text-transparent"
             >
-              Full Stack Developer
+              {t('jose.role')} {/* Utilizando la traducción de 'role' */}
             </motion.span>
 
             <motion.p
@@ -32,10 +36,7 @@ const Jose = () => {
               transition={{ duration: 0.5, delay: 1 }}
               className="my-3 max-w-xl py-6 font-light tracking-tighter"
             >
-              Hi, I’m Jose Full-Stack Developer with a passion for building
-              dynamic, user-friendly web applications. I specialize in both
-              front-end and back-end development, I enjoy solving complex
-              problems and delivering clean code.
+              {t('jose.description')} {/* Utilizando la traducción de 'description' */}
             </motion.p>
           </div>
         </div>
@@ -49,7 +50,6 @@ const Jose = () => {
               transition={{ duration: 0.5, delay: 1 }}
               src={josePic}
               alt="Jose Luis Hernández"
-              className=""
             />
           </div>
         </div>

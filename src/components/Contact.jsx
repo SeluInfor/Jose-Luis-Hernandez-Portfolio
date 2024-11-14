@@ -1,8 +1,10 @@
-import { CONTACT } from "../constants";
+
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import { FaPhoneAlt, FaEnvelope, FaMapPin, FaArrowUp } from "react-icons/fa";
 
 const Contact = () => {
+  const { t, i18n } = useTranslation();
   // Función para hacer scroll hacia arriba
   const scrollToTop = () => {
     window.scrollTo({
@@ -20,7 +22,8 @@ const Contact = () => {
         transition={{ duration: 0.3 }}
         className="my-20 text-center text-4xl"
       >
-        Contact me
+      <p>{t("contact.contactMe")}</p>
+
       </motion.h2>
 
       {/* Motion para los detalles de contacto */}
@@ -33,19 +36,19 @@ const Contact = () => {
         {/* Dirección */}
         <div className="flex items-center justify-center my-4">
           <FaMapPin className="mr-2" size={20} />
-          <p>{CONTACT.address}</p>
+          <p>{t("contact.address")}</p>
         </div>
 
         {/* Correo Electrónico */}
         <div className="flex items-center justify-center my-4">
           <FaEnvelope className="mr-2" size={20} />
-          <p>{CONTACT.email}</p>
+          <p>{t("contact.email")}</p>
         </div>
 
         {/* Número de Teléfono */}
         <div className="flex items-center justify-center my-4">
           <FaPhoneAlt className="mr-2" size={20} />
-          <a href={`tel:${CONTACT.phoneNo}`}>{CONTACT.phoneNo}</a>
+          <a href>{t("contact.phoneNo")}</a>
         </div>
 
         {/* Botón de scroll hacia arriba */}
